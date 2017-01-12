@@ -15,25 +15,22 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
 <body class="w3-light-grey">
 
+body{padding-top: 70px;}
+
  <!-- Top container -->
- <div class="w3-container w3-dark-grey" style="z-index:4", max-height:'2px'>
- <div class="w3-container w3-top w3-padding w3-dark-grey w3-large" style="z-index:5", max-height:'4px'>
-    <button class="w3-btn w3-hide-large w3-padding-0 w3-hover-text-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
-   <span class="w3-right"><img src="static/img/logo.png" width="6%" height="6%"/>
-     <a href="Login.html.html" class="btn btn-link" role="button"><h3>Log in</h3> </a>
-     </span>
-   <span class="w3-right"><img src="static/img/logo.png" width="6%" height="6%"/></span>
-  </div>
-  
-  <!-- Sidenav/menu -->
+<div class = "w3-container w3-dark-grey navbar-fixed-top container-fluid" style = "z-index:4", max - height: '2px' >
+  <button class="w3-btn w3-hide-large w3-padding-0 w3-hover-text-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+  <span class="w3-right"><a href="#"> <img src="static/img/logo.png" width="6%" height="6%"/></a> <!-- Het logo wordt extreem klein als in smaller view de menu knop er boven komt, nog iets aan doen-->
+  <a href = "Logout.html" class = "btn btn-link" role = "button" >  <h3> Log out </h3> </a><!-- It makes sense you can also log out if you want, right?-->
+  	</span>
+</div>
 
 <!-- Sidenav/menu -->
-<nav class="w3-sidenav w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidenav"><br>
+<nav class="w3-sidenav w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px; padding-top: 70px;" id="mySidenav"><br>
   <div class="w3-container w3-row">
     <div class="w3-col s4">
-      <img src="static/img/Avatar.png" width="70%" height="70%" class="w3-circle w3-margin-right"> </div>
+      <img src="static/img/Avatar.png" width="70%" height="70%" class="w3-circle w3-margin-right">
     </div>
-
     <div class="w3-col s8">
       <span>Welcome, <strong>Home 1</strong></span><br>
       <a href="#" class="w3-hover-none w3-hover-text-red w3-show-inline-block"><i class="fa fa-envelope"></i></a>
@@ -45,10 +42,10 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <div class="w3-container">
     <h5>Dashboard</h5>
   </div>
-  <a href="#" class="w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-  <a href="#" class="w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Overview</a> <!-- Deze 3 moeten allemaal nog naar de juiste pagina verwezen worden-->
-  <a href="#" class="w3-padding"><i class="fa fa-bell fa-fw"></i>  Messages </a>
-  <a href="#" class="w3-padding"><i class="fa fa-bullseye fa-fw"></i>  About Bierpaal</a>
+  <a href="#" class="w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+  <a href="#overview" class="w3-padding"><i class="fa fa-users fa-fw"></i>  Overview</a> <!-- Deze 3 leiden nu alledrie naar het bijbehorde gedeelte, alleen verdwijnt het kopje dan onder de hearder, iemand vragen.-->
+  <a href="#messages" class="w3-padding"><i class="fa fa-bell fa-fw"></i>  Messages </a>
+  <a href="#about" class="w3-padding"><i class="fa fa-bullseye fa-fw"></i>  About</a>
 <br><br>
 </nav>
 
@@ -60,7 +57,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <div class="w3-main" style="margin-left:300px;margin-top:43px;">
 
   <!-- Header -->
-  <header class="w3-container" style="padding-top:22px">
+  <header class="w3-container" style="padding-top: 40px;">
+  <a name="overview"></a>
     <h5><b><i class="fa fa-dashboard"></i> "Drinking" Roommates</b></h5> <!-- Deze account blokjes moeten automatisch worden, dat er een blokje bij gepleurd wordt als er een nieuw account toegevoegd wordt -->
   </header>
 
@@ -76,65 +74,75 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       </div>
     </div>
   </div>
-  
-  <hr>
-  <div class="w3-container">
-    <h5>Recent Users</h5> <!-- Deze functie zou misschien nog kunnen, maar kijken of dat lukt-->
-    <ul class="w3-ul w3-card-4 w3-white">
-      <li class="w3-padding-16">
-        <span onclick="this.parentElement.style.display='none'" class="w3-closebtn w3-padding w3-margin-right w3-medium">x</span>
-        <img src="/w3images/avatar2.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
-        <span class="w3-xlarge">Michael</span><br>
-      </li>
-      <li class="w3-padding-16">
-        <span onclick="this.parentElement.style.display='none'" class="w3-closebtn w3-padding w3-margin-right w3-medium">x</span>
-        <img src="/w3images/avatar5.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
-        <span class="w3-xlarge">Tessa</span><br>
-      </li>
-      <li class="w3-padding-16">
-        <span onclick="this.parentElement.style.display='none'" class="w3-closebtn w3-padding w3-margin-right w3-medium">x</span>
-        <img src="/w3images/avatar6.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
-        <span class="w3-xlarge">Ward</span><br>
-      </li>
-    </ul>
-  </div>
   <hr>
 
   <div class="w3-container">
-    <h5>Recent Comments</h5> <!-- Deze functie is tof, zou automatisch moeten gebeuren, + nog een toevoeg knopje + veld-->
+  <a name="messages"></a>
+    <h5>Messages</h5> <!-- Deze functie is tof, zou automatisch moeten gebeuren, + nog een toevoeg knopje + veld-->
     <div class="w3-row">
       <div class="w3-col m2 text-center">
         <img class="w3-circle" src="/w3images/avatar3.png" style="width:96px;height:96px">
       </div>
       <div class="w3-col m10 w3-container">
-        <h4>Marit <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span></h4>
+        <h4>Marit <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span></h4> <!-- had even veel comments nodig om de scroll functie te kunnen toepassen-->
+        <p>Waauw moeilijk tof deze site! De beste site die ik ooit tegen ben gekomen!</p><br>
+      </div>
+    </div>
+	<div class="w3-row">
+      <div class="w3-col m2 text-center">
+        <img class="w3-circle" src="/w3images/avatar3.png" style="width:96px;height:96px">
+      </div>
+      <div class="w3-col m10 w3-container">
+        <h4>Tessa <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span></h4>
+        <p>Waauw moeilijk tof deze site! De beste site die ik ooit tegen ben gekomen!</p><br>
+      </div>
+    </div>
+	<div class="w3-row">
+      <div class="w3-col m2 text-center">
+        <img class="w3-circle" src="/w3images/avatar3.png" style="width:96px;height:96px">
+      </div>
+      <div class="w3-col m10 w3-container">
+        <h4>Michael <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span></h4>
+        <p>Waauw moeilijk tof deze site! De beste site die ik ooit tegen ben gekomen!</p><br>
+      </div>
+    </div>
+	<div class="w3-row">
+      <div class="w3-col m2 text-center">
+        <img class="w3-circle" src="/w3images/avatar3.png" style="width:96px;height:96px">
+      </div>
+      <div class="w3-col m10 w3-container">
+        <h4>Ward <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span></h4>
         <p>Waauw moeilijk tof deze site! De beste site die ik ooit tegen ben gekomen!</p><br>
       </div>
     </div>
   </div>
   <br>
   
-  <div class="w3-container w3-dark-grey w3-padding-32"> <!-- Dit onderste balkje ziet er nice uit maar geen idee wat we ermee kunnen?-->
+  <div class="w3-container w3-dark-grey w3-padding-32"> <!-- Ik heb hier maar een eigen invulling aan gegeven. Dit hoeft geen block content te worden, want kan hier standaard staan, maakt niet uit welk account-->
     <div class="w3-row">
       <div class="w3-container w3-third">
-        <h5 class="w3-bottombar w3-border-green">Kunnen we</h5>
-        <p>Language</p>
+	  <a name="about"></a>
+        <h5 class="w3-bottombar w3-border-green">About Bierpaal</h5>
+        <p>Bierpaal is a website created by students, for students. We, as students living in a studenthouse, all understand the extreme amount of trouble 
+			it can be to keep track of which of your roommates drank how many beers from which crate. Supposing your roommates are all honest enough to keep track
+			of this, we present to you an easy and fun method. Cheers!</p>
         
       </div>
       <div class="w3-container w3-third">
-        <h5 class="w3-bottombar w3-border-red">iets met</h5>
-        <p>More</p>
+        <h5 class="w3-bottombar w3-border-red">About us</h5>
+        <p>We are four TU/e students with different backgrounds (ICT, Industrial Design and Psychology and Technology), that have in common that we follow the course
+			'Web Technology', for which we created this site. We all live in a studenthouse in Eindhoven and all enjoy having a beer every now and then.</p>
       </div>
       <div class="w3-container w3-third">
-        <h5 class="w3-bottombar w3-border-orange">dit balkje?</h5>
-        <p>Users</p>
+        <h5 class="w3-bottombar w3-border-orange">About beer</h5>
+        <p>As you are visiting this site at this moment, we'll just assume that you also have a passion (or just like) the liquid gold - beer. We hope you enjoy
+			this site, and may your beer be plentiful. <i> Geniet, maar drink met mate.</i></p>
       </div>
     </div>
   </div>
 
   <!-- Footer, belangrijk om te laten staan, misschien met wat extra content nog als we dat willen -->
   <footer class="w3-container w3-padding-16 w3-light-grey">
-    <h4>FOOTER</h4>
     <p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
   </footer>
 
@@ -144,10 +152,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <script>
 // Get the Sidenav
 var mySidenav = document.getElementById("mySidenav");
-
 // Get the DIV with overlay effect
 var overlayBg = document.getElementById("myOverlay");
-
 // Toggle between showing and hiding the sidenav, and add overlay effect
 function w3_open() {
     if (mySidenav.style.display === 'block') {
@@ -158,7 +164,6 @@ function w3_open() {
         overlayBg.style.display = "block";
     }
 }
-
 // Close the sidenav with the close button
 function w3_close() {
     mySidenav.style.display = "none";
