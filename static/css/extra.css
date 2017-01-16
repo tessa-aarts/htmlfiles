@@ -1,4 +1,3 @@
-
 .anchor{ 
   display: block;
   height: 95px; /*same height as header*/
@@ -6,3 +5,8 @@
   visibility: hidden;
 }
 
+#fixedbutton {
+    position: fixed;
+    bottom: 30px;
+    right: 30px; 
+}
