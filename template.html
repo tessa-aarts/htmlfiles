@@ -42,9 +42,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     </div>
     <div class="w3-col s8">
       <span>Welcome, <strong>[naam van huis]</strong></span><br>
-      <a href="#" class="w3-hover-none w3-hover-text-red w3-show-inline-block"><i class="fa fa-envelope"></i></a>
-      <a href="#" class="w3-hover-none w3-hover-text-green w3-show-inline-block"><i class="fa fa-user"></i></a>
-      <a href="#" class="w3-hover-none w3-hover-text-blue w3-show-inline-block"><i class="fa fa-cog"></i></a>
     </div>
   </div>
   <hr>
@@ -55,7 +52,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <div class="w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu" style="cursor:pointer"><i class="fa fa-remove fa-fw"></i>  Close Menu</div>
   <a href="#roommates" class="w3-padding"><i class="fa fa-users fa-fw"></i> Roommates</a> 
   <a href="#messages" class="w3-padding"><i class="fa fa-comments fa-fw"></i>  Messages </a>
-  <a href="#feed" class="w3-padding"><i class="fa fa-beer fa-fw"></i> Beer feed </a>
   <a href="#about" class="w3-padding"><i class="fa fa-bullseye fa-fw"></i>  About</a>
 <br><br>
 </nav>
@@ -94,7 +90,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <h5><b><i class="fa fa-users"></i> "Drinking" Roommates</b></h5> <!-- Deze account blokjes moeten automatisch worden, dat er een blokje bij gepleurd wordt als er een nieuw account toegevoegd wordt -->
 	<div class="w3-row-padding w3-margin-bottom">
 		<div class="w3-quarter">
-			<div class="w3-container w3-red w3-padding-16">
+			<div class="w3-container w3-red w3-padding-16" style="cursor:pointer">
         <!--<div class="w3-left"><img src="/static/img/avatar1.png" class="w3-circle" style="width:60px"></div> 	Dit kan als we die avatar willen, maar is niet echt nodig-->
 				<div class="w3-left">
 					<h3>[naam van persoon]</h4>
@@ -104,10 +100,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 				</div>
 				<div class="w3-container">
 				</div>
-				<button type="button" class="btn btn-primary"><i class="fa fa-trash-o"></i></button>	
-				<div class="w3-right">
-					<button type="button" class="btn btn-primary" id="togglebiermenu"><i class="fa fa-ellipsis-v"></i></button>
-				</div>
+				<button type="button" class="btn btn-primary"><i class="fa fa-trash-o"></i></button>
+				<div class="w3-right"><button type="button" class="btn btn-primary">I bought a new crate</i></button></div>
 			</div>
 		</div>
 	</div>
@@ -137,16 +131,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 			</div>
 		</div>
 	</div>
-	<br>
-	<div class="w3-container" style="padding-top: 40px;">
-		<span class="anchor" id="feed"></span> 
-		<h5><b><i class="fa fa-beer"></i> Beer feed</b></h5>
-		<div class="w3-container">
-			<div class="feed"> Dit is een div waarin een feed kan komen yay </div>
-			<br><br>
-		</div>
-	</div>
- 
+	<br><br>
+	
 	<span class="anchor" id="about"></span> 
 	<div class="w3-container w3-dark-grey w3-padding-32"> <!-- Ik heb hier maar een eigen invulling aan gegeven. Dit hoeft geen block content te worden, want kan hier standaard staan, maakt niet uit welk account-->
 		<div class="w3-row">
@@ -191,4 +177,3 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
 </html>
 <script type="text/javascript" src="js/script.js"></script>
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
